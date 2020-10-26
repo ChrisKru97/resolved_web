@@ -1,0 +1,267 @@
+.menu {
+    margin-left: 25pt;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 800pt;
+}
+
+div.photos {
+		width: 80vw;
+		margin: 0 auto;
+		min-width: 600px;
+}
+
+[schedule-name], a {
+    color: dodgerblue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+html, button {
+    font-family: Nunito, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 40pt;
+}
+
+header {
+    min-height: 50pt;
+    top: 0;
+    z-index: 1;
+    padding: 0 30pt;
+    position: sticky;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button, header a {
+    margin-right: 10pt;
+    padding: 1px 6px;
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18pt;
+    cursor: pointer;
+}
+
+button:hover, header a:hover {
+    border-bottom: white solid 2pt;
+    margin-top: 2pt;
+    text-shadow: 0 10pt 10pt rgb(0, 0, 0);
+}
+
+h1, .intro-container h2 {
+    font-weight: 700;
+    color: #BB4747;
+}
+
+.schedule-wrapper {
+    margin: 0 auto;
+    width: 60%;
+    min-width: 600pt;
+    display: flex;
+    justify-content: space-around;
+}
+
+.schedule-wrapper > div {
+    margin: 0 10pt;
+}
+
+h4 {
+    margin-bottom: 0;
+}
+
+.intro-container h2 {
+    margin-top: 0;
+}
+
+header img {
+    min-height: 30pt;
+    height: 5vh;
+}
+
+.logo-wrapper {
+    padding: 5pt;
+    border-radius: 5pt;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+button:focus {
+    outline: none;
+}
+
+.intro-container img, .schedule-wrapper img {
+    width: 20%;
+    max-height: 100pt;
+    margin-right: 20pt;
+    color: #888888;
+}
+
+.intro-container {
+    color: #888888;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-row: auto;
+    grid-column-gap: 30pt;
+    grid-row-gap: 30pt;
+}
+
+.intro-container > div, .schedule-wrapper.contact > div {
+    align-items: center;
+    display: flex;
+}
+
+.image-wrapper::before {
+    height: 92vh;
+    width: 100%;
+    content: "";
+    position: absolute;
+    filter: brightness(0.5);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("bg.png");
+}
+
+.image-wrapper {
+    height: 92vh;
+    width: 100%;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.image-wrapper iframe {
+    position: relative;
+    min-width: 400pt;
+    min-height: 200px;
+    max-height: 600px;
+    max-width: 900px;
+    width: 40%;
+    height: 60%;
+}
+
+iframe.map-container {
+    width: calc(100% - 40pt - 4px);
+    margin: 20pt;
+    height: 400pt;
+}
+
+.app-links {
+    display: flex;
+    justify-content: center;
+}
+
+.app-links img {
+    margin: 25pt;
+    height: 50pt;
+}
+
+.content-wrapper {
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+.content-wrapper p {
+    padding: 0 25pt;
+}
+
+iframe {
+    box-shadow: 3pt 3pt 4pt 1pt rgba(0, 0, 0, 0.15);
+    border-radius: 10pt;
+}
+
+.selected-title {
+    color: black;
+    font-size: 50pt;
+    text-shadow: 3pt 3pt 5pt rgba(0, 0, 0, 0.5);
+}
+
+.selected-button {
+    color: deepskyblue;
+    font-size: 20pt;
+    text-decoration: underline;
+}
+
+.modal-wrapper {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px) brightness(0.5);
+}
+
+.info-modal {
+    height: 90vh;
+    width: 90vw;
+    background-color: white;
+    border-radius: 10pt;
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+}
+
+.info-modal > p {
+    overflow: auto;
+    margin: 15pt;
+    max-height: calc(90vh - 30pt);
+    font-size: 1.5vw;
+}
+
+.close-button {
+    margin-top: 1vw;
+    margin-right: 1vw;
+    cursor: pointer;
+    font-size: 3vw;
+    line-height: 3vw;
+    width: 3vw;
+    float: right;
+    display: grid;
+    place-items: center;
+    color: dimgray;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+p {
+    font-size: 13pt;
+}
+
+@media only screen and (max-width: 992px) {
+    button, header a {
+        font-size: 3vw;
+    }
+
+    .selected-button {
+        font-size: 3.5vw;
+    }
+
+    .image-overlay.title {
+        font-size: 5vw;
+    }
+
+    .image-overlay.verse {
+        font-size: 3vw;
+    }
+}
